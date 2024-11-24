@@ -1,24 +1,15 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "apps/specific-content-system/src",
+  "sourceRoot": "apps/auth/src",
   "compilerOptions": {
     "deleteOutDir": true,
     "webpack": true,
-    "tsConfigPath": "apps/specific-content-system/tsconfig.app.json"
+    "tsConfigPath": "apps/auth/tsconfig.app.json"
   },
   "monorepo": true,
-  "root": "apps/specific-content-system",
+  "root": "apps/auth",
   "projects": {
-    "specific-content-system": {
-      "type": "application",
-      "root": "apps/specific-content-system",
-      "entryFile": "main",
-      "sourceRoot": "apps/specific-content-system/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/specific-content-system/tsconfig.app.json"
-      }
-    },
     "auth": {
       "type": "application",
       "root": "apps/auth",
@@ -26,24 +17,6 @@
       "sourceRoot": "apps/auth/src",
       "compilerOptions": {
         "tsConfigPath": "apps/auth/tsconfig.app.json"
-      }
-    },
-    "intitute": {
-      "type": "application",
-      "root": "apps/intitute",
-      "entryFile": "main",
-      "sourceRoot": "apps/intitute/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/intitute/tsconfig.app.json"
-      }
-    },
-    "institute": {
-      "type": "application",
-      "root": "apps/institute",
-      "entryFile": "main",
-      "sourceRoot": "apps/institute/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/institute/tsconfig.app.json"
       }
     },
     "content": {
@@ -89,6 +62,15 @@
       "sourceRoot": "libs/common/src",
       "compilerOptions": {
         "tsConfigPath": "libs/common/tsconfig.lib.json"
+      }
+    },
+    "institute": {
+      "type": "application",
+      "root": "apps/institute",
+      "entryFile": "main",
+      "sourceRoot": "apps/institute/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/institute/tsconfig.app.json"
       }
     }
   }
